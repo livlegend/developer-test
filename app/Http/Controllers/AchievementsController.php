@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class AchievementsController extends Controller
 {
+    
     public function index(User $user)
     {
+        // dd($user->achievements);
+        // $user->  
         return response()->json([
             'unlocked_achievements' => [],
             'next_available_achievements' => [],
@@ -17,4 +20,6 @@ class AchievementsController extends Controller
             'remaing_to_unlock_next_badge' => 0
         ]);
     }
+
+
 }
