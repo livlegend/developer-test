@@ -18,7 +18,9 @@ class ExampleTest extends TestCase
     public function test_example()
     {
 
-        $user = User::factory()->create();
+        // $user = User::factory()->create();
+
+        $user = User::first();
         
         $response = $this->get("/users/{$user->id}/achievements");
 
