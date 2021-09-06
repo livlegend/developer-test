@@ -31,7 +31,7 @@ class UnlockLessonWatched
         $user=$event->user;
         $lesson=$event->lesson;
 
-        $nb_lesons_watched=$user->watched;
+        $nb_lesons_watched=count($user->watched);
         if($nb_lesons_watched>0){
             // get the corresponding achievement
             $achievement=Achievement::where('nb_lessons_watched',$nb_lesons_watched)->first();
